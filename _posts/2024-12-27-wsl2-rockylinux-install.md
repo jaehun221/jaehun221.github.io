@@ -41,7 +41,7 @@ wsl -l -v
 wsl -d <배포판이름>
 ```
 <br>
-wsl에서 defalult로 실행되는 배포판 설정
+wsl에서 default로 실행되는 배포판 설정
 ```shell
 wsl --set-default <배포판이름>
 ```
