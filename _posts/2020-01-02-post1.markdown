@@ -7,6 +7,9 @@ category: sample
 # post-sample
 > Hello!
 
+<iframe src="https://ghchart.rshah.org/219138/jaehun221?style=flat&activity=all
+" width="680" height="110"></iframe>
+
 This is code
 ```ruby
 print 'hello world'
