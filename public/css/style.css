@@ -91,8 +91,8 @@ code {
 	padding: 0px 30px;
 }
 
-.sidebar {
-	/*position: fixed;*/
+/* .sidebar {
+	position: fixed;
 	display: flex;
 	flex-flow: column nowrap;
 	flex: 0 0 220px;
@@ -100,6 +100,20 @@ code {
 	z-index: 1;
 	background-color: #222;
 	color: #fff;
+} */
+
+.sidebar {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 0 0 350px;
+    padding: 15px;
+    z-index: 1;
+    background-color: #222;
+    color: #fff;
+    background-image: url('/public/img/blackcat.jpg'); /* 이미지 경로 */
+    background-size: cover; /* 이미지 크기를 사이드바 크기에 맞춤 */
+    background-position: 94.2% 50%; /* 이미지 중심을 사이드바 중심에 배치 */
+    background-repeat: no-repeat; /* 이미지 반복 방지 */
 }
 
 .sidebar-item {
