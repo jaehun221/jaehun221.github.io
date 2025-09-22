@@ -9,7 +9,7 @@ date: 2025-09-22
 ## Rust로 만든 간단한 markdown -> html 변환기
 
 ### 폴더 구조
-src/
+src/<br/>
 ├─ main.rs        // CLI 처리, 파일 입출력. <br/>
 ├─ parser.rs      // Markdown 파싱 모듈. <br/>
 ├─ transformer.rs // Markdown 요소를 HTML 문자열로 변환.<br/> 
