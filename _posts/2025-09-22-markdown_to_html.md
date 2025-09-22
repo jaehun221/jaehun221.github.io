@@ -10,10 +10,10 @@ date: 2025-09-22
 
 ### 폴더 구조
 src/
-├─ main.rs        // 프로그램 진입점, CLI 처리, 파일 입출력
-├─ parser.rs      // Markdown 파싱 모듈
-├─ transformer.rs // Markdown 요소를 HTML 문자열로 변환
-└─ codegen.rs     // HTML 문서 전체 구조 생성 및 출력
+├─ main.rs        // 프로그램 진입점, CLI 처리, 파일 입출력. 
+├─ parser.rs      // Markdown 파싱 모듈. 
+├─ transformer.rs // Markdown 요소를 HTML 문자열로 변환. 
+└─ codegen.rs     // HTML 문서 전체 구조 생성 및 출력. 
 <br/>
 ### 실행 방법
 ```bash
