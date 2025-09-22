@@ -10,7 +10,7 @@ navbar_entries:
 
 project_entries:
   - title: markdown-to-html
-    url: 2025-09-22-markdown_to_html.md
+    url: markdown_to_html.md
     desc: Rust-based Markdown compiler converting Markdown documents to structured, clean HTML.
 
   - title: Project 2
