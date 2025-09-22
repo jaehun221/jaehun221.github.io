@@ -1,4 +1,4 @@
-title: Moonwalk
+title: jaehun221 blog
 author: Abhinav Saxena
 url: https://www.abhinavsaxena.com/moonwalk # root address of the site
 description: > # description of the site (multiple lines allowed)
@@ -6,7 +6,7 @@ description: > # description of the site (multiple lines allowed)
 
 permalink: /:slug
 
-favicon: "./logo.png" # relative path to site's favicon
+favicon: "./github profile.jpeg" # relative path to site's favicon
 
 twitter:
     username: abhinav # update or delete this
