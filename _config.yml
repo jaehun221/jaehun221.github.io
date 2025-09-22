@@ -4,7 +4,7 @@ url: https://www.abhinavsaxena.com/moonwalk # root address of the site
 description: > # description of the site (multiple lines allowed)
   개발 내용 정리 및 포트폴리오용 블로그
 
-permalink: /:slug
+permalink: /:year/:month/:day/:title.html
 
 favicon: "./logo.jpeg" # relative path to site's favicon
 
