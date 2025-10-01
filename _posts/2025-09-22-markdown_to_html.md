@@ -7,7 +7,7 @@ date: 2025-09-22
 ---
 
 ## Rust로 만든 간단한 markdown -> html 변환기
-[github link](https://github.com/jaehun221/markdown-to-html).
+[Github link](https://github.com/jaehun221/markdown-to-html)
 ### 폴더 구조
 src/<br/>
 ├─ main.rs        // CLI 처리, 파일 입출력. <br/>
