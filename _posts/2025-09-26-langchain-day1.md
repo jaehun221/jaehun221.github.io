@@ -72,4 +72,44 @@ messages = [
 ```
 
 
+
+```python
+from langchain_openai import ChatOpenAI
+from langchain_core.prompts import PromptTemplate, ChatPromptTemplate
+
+chat = ChatOpenAI(
+    temperature=0.1
+)
+
+template = PromptTemplate.from_template(
+    "What is the distance between {country_a} and {country_b}"
+)
+
+prompt = template.format(country_a="korea", country_b="Japan")
+
+chat.invoke(prompt)
+
+
+
+template = ChatPromptTemplate.from_messages(
+    [
+        ("system", "You are a geography expert. And you only reply in {langauge}"),
+        ("ai", "Ciao, mi chiamo {name}!"),
+        (
+            "human",
+            "What is the distance between {country_a} and {country_b}. Also, what is your name?"
+        )
+    ]
+)
+
+prompt = template.format_messages(
+    langauge="Korean",
+    name="Jaehun Lee",
+    country_a="Spain",
+    country_b="Italia"
+)
+
+chat.invoke(prompt)
+```
+
 <작성중...>
