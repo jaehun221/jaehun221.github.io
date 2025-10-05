@@ -8,22 +8,71 @@ tags: [langchain, ai]
 
 [Github link](https://github.com/jaehun221/Langchain_Study)
 
-### 폴더구조<br/>
-LANGCHAIN_STUDY<br/>
-├── .venv/<br/>
-├── days/<br/>
-├── .env<br/>
-├── .gitignore<br/>
-├── .python-version<br/>
-├── cli_gpt.py<br/>
-├── LICENSE<br/>
-├── main.py<br/>
-├── pyproject.toml<br/>
-├── README.md<br/>
-└── uv.lock
+### FewShotPromptTemplate
+```python
+from langchain.chat_models import ChatOpenAI
+from langchain.prompts.few_shot import FewShotPromptTemplate
+from langchain.callbacks import StreamingStdOutCallbackHandler
+from langchain.prompts import PromptTemplate
+
+# 예시를 주고 그것을 기반으로 답변을 할 수있게 함
+
+chat = ChatOpenAI(
+    model="gpt-4o-mini",
+    temperature=0.1,
+    streaming=True,
+    callbacks=[
+        StreamingStdOutCallbackHandler()
+    ],
+)
+
+examples = [
+    {
+        "question": "What do you know about France?",
+        "answer": """
+        Here is what I know:
+        Capital: Paris
+        Language: French
+        Food: Wine and Cheese
+        Currency: Euro
+        """,
+    },
+    {
+        "question": "What do you know about Italy?",
+        "answer": """
+        I know this:
+        Capital: Rome
+        Language: Italian
+        Food: Pizza and Pasta
+        Currency: Euro
+        """,
+    },
+    {
+        "question": "What do you know about Greece?",
+        "answer": """
+        I know this:
+        Capital: Athens
+        Language: Greek
+        Food: Souvlaki and Feta Cheese
+        Currency: Euro
+        """,
+    },
+]
+
+example_prompt = PromptTemplate.from_template("Human: {question}\nAI:{answer}") 
 
 
-## 주요 메서드 및 문법
+prompt = FewShotPromptTemplate(
+    examples=examples,
+    example_prompt=example_prompt,
+    suffix="Human: What do you know about {country}?",
+    input_variables=["country"],
+)
+
+chain = prompt | chat
+
+chain.invoke({"country": "Spain"})
+```
 
 
 <작성중...>
