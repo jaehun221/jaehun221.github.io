@@ -58,8 +58,11 @@ examples = [
         """,
     },
 ]
+```
+위와 같은 형식으로 example에 예시를 몇가지 넣어두었다.
 
-example_prompt = PromptTemplate.from_template("Human: {question}\nAI:{answer}") 
+```python
+example_prompt = PromptTemplate.from_template("Human: {question}\nAI:{answer}")
 
 
 prompt = FewShotPromptTemplate(
@@ -73,6 +76,41 @@ chain = prompt | chat
 
 chain.invoke({"country": "Spain"})
 ```
+`FewShotPromptTemplate`: 위 코드와 같이 예시를 주고 그것을 기반으로 답변을 할수 있도록 하는 방식이다.
+<br/>
 
+### LengthBaseExampleSelector
+
+```python
+from langchain_openai import ChatOpenAI
+from langchain.prompts.few_shot import FewShotPromptTemplate
+from langchain.callbacks import StreamingStdOutCallbackHandler
+from langchain.prompts import PromptTemplate
+from langchain.prompts.example_selector import LengthBasedExampleSelector
+
+# example = ...
+
+example_prompt = PromptTemplate.from_template("Human: {question}\nAI: {answer}")
+
+example_selector = LengthBasedExampleSelector(
+    examples=examples,
+    example_prompt=example_prompt,
+    max_length=80
+)
+
+prompt = FewShotPromptTemplate(
+    example_selector=example_selector,
+    example_prompt=example_prompt,
+    suffix="Human: What do you know about {country}?",
+    input_variables=["country"]
+)
+
+chain = prompt | chat
+
+chain.invoke({"country": "Spain"})
+```
+
+아까와 같이 example 변수에 예시를 주었을 때 LengthBasedExampleSelector를 사용해 `max_length`를 지정해줄 수 있다.<br/>
+max_length가 80이라고 할 때
 
 <작성중...>

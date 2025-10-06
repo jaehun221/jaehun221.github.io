@@ -222,7 +222,7 @@ final_chain.invoke(
 실시간으로 답변을 출력해준다.
 
 template와 model을 `|`로 묶어 하나의 처리 단위인 chain을 생성할 수 있다.<br/> 
-또한 위 코드처럼 `chef_chain | veg_chain`과 같이 model의 출력 결과를 입력으로 넘겨주는 방식으로 파이프라인을 만들 수 있다.
+또한 위 코드처럼 `chef_chain | veg_chain`과 같이 model의 출력 **결과**를 **입력**으로 넘겨주는 방식으로 파이프라인을 만들 수 있다.
 
 
 day1 end
