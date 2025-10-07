@@ -111,6 +111,7 @@ chain.invoke({"country": "Spain"})
 ```
 
 아까와 같이 example 변수에 예시를 주었을 때 LengthBasedExampleSelector를 사용해 `max_length`를 지정해줄 수 있다.<br/>
-max_length가 80이라고 할 때
+max_length가 80이라고 할 때 총 80글자가 넘지 않도록 예시를 선택한다<br/>
+ex) length = 30인 example이 3개 있을 때 80이 넘지 않도록 2개의 예시만 사용
 
 <작성중...>
