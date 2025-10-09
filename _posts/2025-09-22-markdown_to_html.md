@@ -31,8 +31,6 @@ transformer.rs에서 HTML 블록 변환 → codegen.rs에서 최종 HTML 구조 
 
 main.rs
 ```rust
-// ============= 안승우 파트 =============
-
 mod parser; //parser.rs 가져오기
 mod transformer; //transformer.rs 가져오기
 mod codegen; //codegen.rs 가져오기
@@ -83,8 +81,6 @@ fn main() {
 
 parser.rs
 ```rust
-// ============= 안승우 파트 =============
-
 //내용 설명 : 마크 다운 파일에 일반 단락과 빈칸 그리고 헤더를 나눠줌 (줄마다) 헤더는 #의 갯수에 따라 h1, h2, h3로 나눠줌
 
 // ============= 마크 다운의 3요소 =============
@@ -151,8 +147,6 @@ pub fn do_parse(md: &str) -> Vec<MarkdownElement> {
 
 transformer.rs
 ```rust
-// ============= 이재훈 파트 =============
-
 use regex::Regex;
 use crate::parser::MarkdownElement;
 
@@ -216,8 +210,6 @@ s = re_code.replace_all(&s, "<code>$1</code>").to_string();
 
 codegen.rs
 ```rust
-// ============= 이재훈 파트 =============
-
 use crate::parser::MarkdownElement;
 use crate::transformer;
 
