@@ -14,6 +14,9 @@ project_entries:
     desc: Rust-based Markdown compiler converting Markdown documents to structured, clean HTML.
     # highlight: WIP
   
+  - title: it-network-club
+    url: /2025/10/11/it_network_club
+    desc: Spring Boot & Spring Security web app with user login, registration, and post CRUD.
 
 old_project_entries:
   # - title: Soopr
