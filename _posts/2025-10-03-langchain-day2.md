@@ -8,6 +8,8 @@ tags: [langchain, ai]
 
 [Github link](https://github.com/jaehun221/Langchain_Study)
 
+## Model I/O
+
 ### FewShotPromptTemplate
 ```python
 from langchain.chat_models import ChatOpenAI
